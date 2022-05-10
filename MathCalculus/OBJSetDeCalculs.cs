@@ -13,14 +13,5 @@ namespace MathCalculus
         public int numB { get; set; }
         public int MCD { get; set; }
         public int MCM { get; set; }
-
-        public int sumaNum { get; set; }
-        public int primerMenysSegon { get; set; }
-        public int segonMenysPrimer { get; set; }
-        public int multiplicacio { get; set; }
-        public double primerDivSegon { get; set; }
-        public double segonDivPrimer { get; set; }
-
-
     }
 }

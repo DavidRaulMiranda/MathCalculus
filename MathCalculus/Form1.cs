@@ -56,24 +56,16 @@ namespace MathCalculus
             if (lblResCMD.Text != "" && lblResMCM.Text != "")
             {
                 lvResult.Items.Clear();
-                string[] print = c.SetDeCalcul();
+                List<int> print = c.SetDeCalcul();
                 if (print != null)
                 {
 
-                    foreach (string item in print)
+                    foreach (var item in print)
                     {
-                        lvResult.Items.Add(item);
+                        lvResult.Items.Add(item.ToString());
                     }
                 }
             }
-            /*
-            lvResult.Items.Add("a+b: "+d.sumaNum.ToString());
-            lvResult.Items.Add("a-b: " + d.primerMenysSegon.ToString());
-            lvResult.Items.Add("b-a: " + d.segonMenysPrimer.ToString());
-            lvResult.Items.Add("a*b: " + d.multiplicacio.ToString());
-            lvResult.Items.Add("a/b: " + d.primerDivSegon.ToString());
-            lvResult.Items.Add("b/a: " + d.segonDivPrimer.ToString());
-            */
 
         }
     }

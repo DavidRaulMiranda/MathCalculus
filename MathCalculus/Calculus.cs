@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MathCalculus
 {
@@ -53,20 +54,26 @@ namespace MathCalculus
                 return "";
             }
         }
-        public string[] SetDeCalcul()
+        public List<int> SetDeCalcul()
         {
+            List<int> resultats = new List<int>();
             try
             {
-                set.sumaNum = set.numA + set.numB;
-                set.primerMenysSegon = set.numA - set.numB;
-                set.segonMenysPrimer = set.numB - set.numA;
-                set.multiplicacio = set.numA * set.numB;
-                set.primerDivSegon =  (double)set.numA / (double)set.numB;
-                set.segonDivPrimer = (double)set.numB / (double)set.numA;
-                return ResultToString();
+                resultats.Add(set.numA + set.numB);
+                resultats.Add(set.numA - set.numB);
+                resultats.Add(set.numB - set.numA);
+                if(set.numA * set.numB > 300)
+                {
+                    return null;
+                }
+                resultats.Add(set.numA * set.numB);
+                resultats.Add(set.numA / set.numB);
+                resultats.Add(set.numB / set.numA);
+                return resultats;
             }
-            catch (Exception) //catch diferent 
+            catch (DivideByZeroException) //catch diferent 
             {
+                MessageBox.Show("Attempted to divide by zero");
                 return null;
             } 
         }     
@@ -74,18 +81,6 @@ namespace MathCalculus
         {
             string[] data = new [] { set.numA.ToString(), set.numB.ToString() };
             return data;
-        }
-        private string[] ResultToString()
-        {
-            
-            List<string> print = new List<string>();
-            print.Add("a+b:"+set.sumaNum.ToString());
-            print.Add("a-b:"+set.primerMenysSegon.ToString());
-            print.Add("b-a:"+set.segonMenysPrimer.ToString());
-            print.Add("a*b:"+set.multiplicacio.ToString());
-            print.Add("a/b:"+set.primerDivSegon.ToString());
-            print.Add("b/a:"+set.segonDivPrimer.ToString());
-            return print.ToArray();
         }
         private  bool AGTB(int a , int b)
         {
