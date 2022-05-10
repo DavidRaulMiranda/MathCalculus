@@ -20,6 +20,19 @@ namespace Calculus.UnitTest
             rules.set.numB = b;
             var result = rules.SetDeCalcul();
             Assert.That(result, Is.Null);
-}
+        }
+
+
+        [TestCase(15, 10)]
+        [TestCase(10, 15)]
+        public void CalculaMCD_Normal_ExpectedValue(int a, int b)
+        {
+            var rules = new MathCalculus.Calculus();
+            rules.set = new OBJSetDeCalculs();
+            rules.set.numA = a;
+            rules.set.numB = b;
+            var result = rules.CalculaMCD();
+            Assert.AreEqual(result, "5");
+        }
     }
 }
