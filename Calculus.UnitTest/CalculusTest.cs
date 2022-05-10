@@ -10,17 +10,7 @@ namespace Calculus.UnitTest
 {
     public class CalculusTest
     {
-        [TestCase(0, 5)]
-        [TestCase(10, 31)]
-        public void SetDeCalcul_Infinite_ExpectedNull(int a, int b)
-        {
-            var rules = new MathCalculus.Calculus();
-            rules.set = new OBJSetDeCalculs();
-            rules.set.numA = a;
-            rules.set.numB = b;
-            var result = rules.SetDeCalcul();
-            Assert.That(result, Is.Null);
-        }
+
 
 
         [TestCase(15, 10)]
@@ -33,6 +23,40 @@ namespace Calculus.UnitTest
             rules.set.numB = b;
             var result = rules.CalculaMCD();
             Assert.AreEqual(result, "5");
+        }
+        [TestCase(9,12,3)]
+        [TestCase(12,9,3)]
+        public void CalculaMCM_Normal_ExpectedValue(int a, int b, int c)
+        {
+            var rules = new MathCalculus.Calculus();
+            rules.set = new OBJSetDeCalculs();
+            rules.set.numA = a;
+            rules.set.numB = b;
+            rules.set.MCD = c;
+            var result = rules.CalculaMCM();
+            Assert.AreEqual(result, "36");
+        }
+        [TestCase(5, 7)]
+        public void SetDeCalcul_Normal_Value(int a, int b)
+        {
+            var rules = new MathCalculus.Calculus();
+            rules.set = new OBJSetDeCalculs();
+            rules.set.numA = a;
+            rules.set.numB = b;
+           
+            var result = rules.CalculaMCM();
+            Assert.Equals(result, new List<int> { 12,-2,2,35,0,1});
+        }
+        [TestCase(0, 5)]
+        [TestCase(10, 31)]
+        public void SetDeCalcul_Infinite_ExpectedNull(int a, int b)
+        {
+            var rules = new MathCalculus.Calculus();
+            rules.set = new OBJSetDeCalculs();
+            rules.set.numA = a;
+            rules.set.numB = b;
+            var result = rules.SetDeCalcul();
+            Assert.That(result, Is.Null);
         }
     }
 }
