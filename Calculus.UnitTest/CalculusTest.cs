@@ -11,7 +11,8 @@ namespace Calculus.UnitTest
     public class CalculusTest
     {
         [TestCase(0, 5)]
-        public void SetDeCalcul_Infinite_ExpectedException(int a, int b)
+        [TestCase(10, 31)]
+        public void SetDeCalcul_Infinite_ExpectedNull(int a, int b)
         {
             var rules = new MathCalculus.Calculus();
             rules.set = new OBJSetDeCalculs();
