@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace MathCalculus
 {
-     class Calculus
+     public class Calculus
     {
         OBJSetDeCalculs set;
         
