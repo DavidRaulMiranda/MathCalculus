@@ -1,0 +1,10 @@
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.csprojAssemblyReference.cache
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.btnMCD.resources
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.Properties.Resources.resources
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.csproj.GenerateResource.cache
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.csproj.CoreCompileInputs.cache
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\bin\Debug\MathCalculus.exe.config
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\bin\Debug\MathCalculus.exe
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\bin\Debug\MathCalculus.pdb
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.exe
+C:\Users\pirio\source\repos\MathCalculus\MathCalculus\obj\Debug\MathCalculus.pdb
