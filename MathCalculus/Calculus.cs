@@ -9,7 +9,7 @@ namespace MathCalculus
 {
      public class Calculus
     {
-        OBJSetDeCalculs set;
+        public OBJSetDeCalculs set;
         
         public string[] GeneraNumeRandom()
         {

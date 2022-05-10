@@ -13,9 +13,12 @@ namespace Calculus.UnitTest
         [TestCase(0, 5)]
         public void SetDeCalcul_Infinite_ExpectedException(int a, int b)
         {
-            var rules = new Calculus();
-            var result = rules.SetDeCalcul(a, b);
-            Assert.That(result, Throws.Div);
+            var rules = new MathCalculus.Calculus();
+            rules.set = new OBJSetDeCalculs();
+            rules.set.numA = a;
+            rules.set.numB = b;
+            var result = rules.SetDeCalcul();
+            Assert.That(result, Is.Null);
 }
     }
 }

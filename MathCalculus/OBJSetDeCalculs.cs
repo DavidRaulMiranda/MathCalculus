@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathCalculus
 {
-    class OBJSetDeCalculs
+    public class OBJSetDeCalculs
     {
 
         public int numA { get; set; }
