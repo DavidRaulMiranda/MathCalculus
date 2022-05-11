@@ -39,13 +39,15 @@ namespace Calculus.UnitTest
         [TestCase(5, 7)]
         public void SetDeCalcul_Normal_Value(int a, int b)
         {
+            List<int> expected = new List<int>() { 12, -2, 2, 35, 0, 1 };
+
             var rules = new MathCalculus.Calculus();
             rules.set = new OBJSetDeCalculs();
             rules.set.numA = a;
             rules.set.numB = b;
            
-            var result = rules.CalculaMCM();
-            Assert.Equals(result, new List<int> { 12,-2,2,35,0,1});
+            var result = rules.SetDeCalcul();
+            CollectionAssert.AreEqual(result, expected);
         }
         [TestCase(0, 5)]
         [TestCase(10, 31)]
